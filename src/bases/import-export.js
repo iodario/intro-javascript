@@ -1,32 +1,32 @@
 // import { heroes } from './data/heroes';
 // import { heroes } from './data/heroes'
+// import  heroes, { owners }  from "../data/heroes";
+import  heroes from "../data/heroes";
 
-import  heroes, { owners }  from "../data/heroes";
-
-const getHeroeById = (id) =>{
+export const getHeroeById = (id) =>{
     return heroes.find(el => el.id === id );
 }
-console.log(getHeroeById(2));
+// console.log(getHeroeById(2));
 
 //getHeroeByOwner
 // SI USO FIND VA A ENCONTRAR EL PRIMER ELEMENTO QUE CUMPLALA CONDICION
 // SI QUIERO ENCONTRAR TODAS LAS COINCIDENCIAS, DEBO USAR FILTER
-const getHeroeByOwner = (owner) =>{
+export const getHeroeByOwner = (owner) =>{
     return heroes.find(el => el.owner === owner)
 }
-console.log(getHeroeByOwner( 'DC'))
+// console.log(getHeroeByOwner( 'DC'))
 
 
 //filterByOwner
-const filterByOwner = (owner) =>{
+export const filterByOwner = (owner) =>{
     return heroes.filter(el => el.owner === owner)
 }
-console.log(filterByOwner( 'DC'))
+// console.log(filterByOwner( 'DC'))
 
 
 //utilizo import compuesto default y no default
 
-console.log(owners)
+ 
 
 
 
